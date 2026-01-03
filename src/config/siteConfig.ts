@@ -10,14 +10,14 @@ export const siteConfig: SiteConfig = {
 	title: "华风夏韵",
 
 	// 站点副标题
-	subtitle: "my blog",
+	subtitle: "demo blog",
 
 	// 站点 URL
-	site_url: "https://blog.sky1314.dpdns.org",
+	site_url: "https://show.sky1314.dpdns.org",
 
 	// 站点描述
 	description:
-		"我的博客，用来写一些文章和感悟之类的东西。",
+		"展示博客，用来展示Tianyi主题。",
 
 	// 站点关键词
 	keywords: [
