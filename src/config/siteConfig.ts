@@ -21,6 +21,7 @@ export const siteConfig: SiteConfig = {
 
 	// 站点关键词
 	keywords: [
+		"Tianyi",
 		"Firefly",
 		"Fuwari",
 		"Astro",
