@@ -5,7 +5,7 @@ export const profileConfig: ProfileConfig = {
 	avatar: "/assets/images/avatar.webp",
 
 	// 名字
-	name: "夜雨",
+	name: "SKY",
 	// 个人签名
 	bio: "世界好大，我想去看看。",
 
@@ -25,7 +25,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Email",
 			icon: "fa6-solid:envelope",
-			url: "mailto:yeyu54876@gmail.com",
+			url: "mailto:sky@sky1314.dpdns.org",
 			showName: false,
 		},
 		{
