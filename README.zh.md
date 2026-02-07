@@ -1,10 +1,10 @@
 
-<img src="./docs/images/1131.png" width = "320" height = "500" alt="Firefly" align=right />
+<img src="./docs/images/1131.png" width = "350" height = "500" alt="Firefly" align=right />
 
 <div align="center">
 
-# Firefly
-> 一款清新美观的 Astro 博客主题模板
+# 流萤 / Firefly 
+> 一款清新美观的 Astro 静态博客主题模板
 > 
 > ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
@@ -25,13 +25,13 @@
 
 
 ---
+📖 README：
+**[简体中文](README.zh.md)** | **[繁體中文](docs/README.zh-TW.md)** | **[English](README.md)** | **[日本語](docs/README.ja.md)** | **[Русский](docs/README.ru.md)**
+
 🚀 快速指南：
 [**🖥️在线预览**](https://firefly.cuteleaf.cn/) /
 [**📝使用文档**](https://docs-firefly.cuteleaf.cn/) /
 [**🍀我的博客**](https://blog.cuteleaf.cn) 
-
-📖 README：
-**[简体中文](README.zh.md)** | **[繁體中文](docs/README.zh-TW.md)** | **[English](README.md)** | **[日本語](docs/README.ja.md)** | **[Русский](docs/README.ru.md)**
 
 ⚡ 静态站点生成: 基于Astro的超快加载速度和SEO优化
 
@@ -44,13 +44,14 @@
 <img alt="firefly" src="./docs/images/1.webp" />
 
 >[!TIP]
->在重要的布局上，Firefly 创新性地增加了左右双侧边栏、文章网格(多列)布局、瀑布流布局，
 >
->增加了站点统计、日历组件、文章目录等小组件，让侧边栏更加丰富，
->
->同时也保留了 fuwari 的布局，可在配置文件中自由切换。
+>Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+> 
+>在重要的布局上，Firefly 创新性地增加了左右双侧边栏、文章网格(多列)布局、瀑布流布局，增加了站点统计、日历组件、文章目录等小组件，让侧边栏更加丰富，同时也保留了原版 fuwari 的布局，可根据自己的喜好在配置文件中自由切换。
 >
 >**更多布局配置及演示请查看：[Firefly 布局系统详解](https://firefly.cuteleaf.cn/posts/firefly-layout-system/)**
+>
+>Firefly 支持i18n多语言切换，但除了简体中文，其他语言均为AI翻译转换，如有错误，欢迎提交 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls) 修正。
 
 ## ✨ 功能特性
 
@@ -63,7 +64,7 @@
 - [x] **全文搜索** - 基于 Pagefind 的客户端搜索，支持文章内容索引
 
 ### 个性化
-- [x] **侧边栏** - 支持配置单侧边栏、双侧边栏
+- [x] **动态侧边栏** - 支持配置单侧边栏、双侧边栏
 - [x] **文章布局** - 支持配置(单列)列表、网格(多列/瀑布流)布局
 - [x] **字体管理** - 支持自定义字体，丰富的字体选择器
 - [x] **页脚配置** - HTML 内容注入，完全自定义
@@ -73,6 +74,7 @@
 - [x] **主题色自定义** - 360° 色相调节
 
 ### 页面组件
+   
 - [x] **留言板** - 支持留言页面
 - [x] **公告栏** - 支持侧边栏公告提示
 - [x] **看板娘** - 支持 Spine 和 Live2D 两种动画引擎
@@ -86,7 +88,7 @@
 - [x] **番组计划** - 基于 Bangumi API 的追番和游戏等记录展示
 - [x] **评论系统** - 集成 Twikoo、Waline、Giscus、Disqus、Artalk 评论系统
 - [x] **访问量统计** - 支持调用 Waline、Twikoo 自带的访问量追踪
-- [x] **音乐播放器** - 基于 APlayer，支持本地音乐和 Meting API 在线音乐
+- [x] **音乐播放器** - Material Design 3 设计风格的音乐播放器
 
 ### 内容增强
 - [x] **图片灯箱** - Fancybox 图片预览功能
@@ -104,11 +106,6 @@
 - [x] **站点地图** - 自动生成 XML Sitemap，支持页面过滤配置
 - [x] **统计分析** - 集成 Google Analytics、Microsoft Clarity
 
-## 📝计划中...
-
-- [ ] **重构 Live2D 看板娘**
-- [ ] **持续优化动画流畅度**
-- [ ] 更多功能持续完善中...
 
 如果你有好用的功能和优化，请提交 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)
 
@@ -258,7 +255,6 @@ comment: true    # 是否允许评论
 - 参考了博主 [霞葉](https://kasuha.com) 分享的 [Bangumi 收藏展示](https://kasuha.com/posts/fuwari-enhance-ep2/) 和 [邮箱保护/图片标题](https://kasuha.com/posts/fuwari-enhance-ep1/) 方案
 - 参考了 [Mizuki](https://github.com/matsuzaka-yuki/Mizuki) 的横幅标题/多级菜单导航栏/樱花特效/KaTeX/Fancybox方案
 - 使用了 [Astro](https://astro.build) 和 [Tailwind CSS](https://tailwindcss.com) 构建
-- 使用了 [MetingJS](https://github.com/metowolf/MetingJS) 和 [APlayer](https://github.com/MoePlayer/APlayer) 音乐播放器
 - 使用了b站up [公公的日常](https://space.bilibili.com/3546750017080050) 提供的Q版 `流萤` 看板娘切片数据模型
 - 图标来自 [Iconify](https://iconify.design/)
 - 流萤部分相关图片素材版权归游戏 [《崩坏：星穹铁道》](https://sr.mihoyo.com/) 开发商 [米哈游](https://www.mihoyo.com/) 所有

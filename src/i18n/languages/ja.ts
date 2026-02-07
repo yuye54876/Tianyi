@@ -20,6 +20,7 @@ export const ja: Translation = {
 	[Key.recentPosts]: "最近の投稿",
 	[Key.postList]: "投稿リスト",
 	[Key.tableOfContents]: "目次",
+	[Key.music]: "音楽",
 
 	// お知らせ
 	[Key.announcement]: "お知らせ",
@@ -184,6 +185,11 @@ export const ja: Translation = {
 	[Key.wallpaperOverlayMode]: "透明",
 	[Key.wallpaperNoneMode]: "単色背景",
 
+	// 投稿リストレイアウト
+	[Key.postListLayout]: "投稿リストレイアウト",
+	[Key.postListLayoutList]: "リスト",
+	[Key.postListLayoutGrid]: "グリッド",
+
 	// スポンサーページ
 	[Key.sponsor]: "スポンサー",
 	[Key.sponsorTitle]: "サポート",
@@ -245,4 +251,10 @@ export const ja: Translation = {
 	[Key.copyLink]: "リンクをコピー",
 	[Key.savePoster]: "ポスターを保存",
 	[Key.scanToRead]: "QRコードで読む",
+
+	// コードブロック折りたたみ設定
+	[Key.codeCollapsibleShowMore]: "もっと表示",
+	[Key.codeCollapsibleShowLess]: "少なく表示",
+	[Key.codeCollapsibleExpanded]: "コードブロックが展開されました",
+	[Key.codeCollapsibleCollapsed]: "コードブロックが折りたたまれました",
 };
