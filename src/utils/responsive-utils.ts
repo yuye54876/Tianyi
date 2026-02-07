@@ -14,8 +14,8 @@ export interface ResponsiveSidebarConfig {
  *
  * 响应式布局（硬编码）：
  * - 768px及以下: 隐藏侧栏，显示底部mobileBottomComponents
- * - 769px-1199px: 显示左侧栏，隐藏右侧栏
- * - 1200px及以上: 根据position配置显示侧栏
+ * - 769px-1279px: 显示左侧栏，隐藏右侧栏
+ * - 1280px及以上: 根据position配置显示侧栏
  */
 export function getResponsiveSidebarConfig(): ResponsiveSidebarConfig {
 	const isBothSidebars =
@@ -34,7 +34,7 @@ export function getResponsiveSidebarConfig(): ResponsiveSidebarConfig {
 	// 响应式布局由 CSS 处理，这里仅用于判断是否有组件
 	const mobileShowSidebar = false; // 768px及以下不显示侧边栏
 	const tabletShowSidebar = sidebarLayoutConfig.enable; // 769px及以上显示
-	const desktopShowSidebar = sidebarLayoutConfig.enable; // 1200px及以上显示
+	const desktopShowSidebar = sidebarLayoutConfig.enable; // 1280px及以上显示
 
 	return {
 		isBothSidebars,
@@ -51,8 +51,8 @@ export function getResponsiveSidebarConfig(): ResponsiveSidebarConfig {
  *
  * 响应式设计：
  * - 768px及以下: 单列布局（grid-cols-1），隐藏侧栏，显示底部组件
- * - 769px-1199px: 2列布局（左侧栏 + 内容），隐藏右侧栏
- * - 1200px及以上: 3列或2列布局（根据是否有右侧栏）
+ * - 769px-1279px: 2列布局（左侧栏 + 内容），隐藏右侧栏
+ * - 1280px及以上: 3列或2列布局（根据是否有右侧栏）
  */
 export function generateGridClasses(config: ResponsiveSidebarConfig): {
 	gridCols: string;
@@ -64,7 +64,7 @@ export function generateGridClasses(config: ResponsiveSidebarConfig): {
 		config.hasLeftComponents &&
 		config.hasRightComponents
 	) {
-		// 双侧边栏: 1200px+显示左+中+右，769-1199px显示左+中，768-以下单列
+		// 双侧边栏: 1280px+显示左+中+右，769-1279px显示左+中，768-以下单列
 		gridCols =
 			"grid-cols-1 md:grid-cols-[17.5rem_1fr] xl:grid-cols-[17.5rem_1fr_17.5rem]";
 	} else if (config.hasLeftComponents && !config.hasRightComponents) {
@@ -88,7 +88,7 @@ export function generateSidebarClasses(): string {
 		"hidden",
 		"md:block",
 		"md:col-span-1",
-		"md:max-w-[17.5rem]",
+		"md:max-w-70",
 		"md:row-start-1",
 		"md:row-end-2",
 		"md:col-start-1",
@@ -104,13 +104,13 @@ export function generateSidebarClasses(): string {
 export function generateRightSidebarClasses(): string {
 	const classes = [
 		"mb-4",
-		// 1200px以下隐藏，1200px及以上显示
+		// 1280px以下隐藏，1280px及以上显示
 		"hidden",
 		"xl:block",
 		"xl:row-start-1",
 		"xl:row-end-2",
 		"xl:col-span-1",
-		"xl:max-w-[17.5rem]",
+		"xl:max-w-70",
 		"onload-animation",
 		"xl:col-start-3", // 右侧边栏在第3列
 	];
