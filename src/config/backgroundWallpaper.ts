@@ -5,12 +5,47 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	mode: "banner",
 	// 是否允许用户通过导航栏切换壁纸模式，设为false可提升性能（只渲染当前模式）
 	switchable: true,
-	// 背景图片配置
+	/**
+	 * 背景图片配置
+	 * 图片路径支持三种格式：
+	 * 1. public 目录（以 "/" 开头，不优化）："/assets/images/banner.avif"
+	 * 2. src 目录（不以 "/" 开头，自动优化但会增加构建时间，推荐）："assets/images/banner.avif"
+	 * 3. 远程 URL："https://example.com/banner.jpg"
+	 * 注意：远程URL和public目录的图片不会被优化，请确保图片体积足够小以免影响加载速度
+	 *
+	 * 建议不要替换d1-d6，m1-m6这些默认示例图片，但你可以删除掉节省空间
+	 * 因为以后可能会更换示例图片，导致你自定义的图片被覆盖
+	 * 所以建议使用自己的图片的时候命名为其他名称，不要使用d1-d6，m1-m6这些名称
+	 *
+	 * 如果只使用一张图片或者使用随机图API，推荐直接使用字符串格式：
+	 * desktop: "https://t.alcy.cc/pc",   // 随机图API
+	 * desktop: "assets/images/DesktopWallpaper/d1.avif", // 单张图片
+	 *
+	 * mobile: "https://t.alcy.cc/mp", // 随机图API
+	 * mobile: "assets/images/MobileWallpaper/m1.avif", // 单张图片
+	 *
+	 * 支持配置多张图片（数组），每次刷新页面随机显示一张：
+	 * desktop: [
+	 * "assets/images/DesktopWallpaper/d1.avif",
+	 * "assets/images/DesktopWallpaper/d2.avif",
+	 * ],
+	 *
+	 * mobile:[
+	 *   "assets/images/MobileWallpaper/m1.avif",
+	 *   "assets/images/MobileWallpaper/m2.avif",
+	 * ],
+	 */
 	src: {
-		// 桌面背景图片
-		desktop: "/assets/images/chunjie.jpg",
-		// 移动背景图片
-		mobile: "/assets/images/huatianyi.jpg",
+		// 桌面背景图片（支持单张或多张随机）
+		// desktop: "assets/images/DesktopWallpaper/d1.avif",
+		desktop: [
+			"assets/images/DesktopWallpaper/yu.jpg",	
+		],
+		// 移动背景图片（支持单张或多张随机）
+		// mobile: "assets/images/MobileWallpaper/m1.avif",
+		mobile: [
+			"assets/images/MobileWallpaper/131489119_p0.jpg",
+		],
 	},
 	// Banner模式特有配置
 	banner: {
@@ -22,7 +57,9 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 主页横幅文字
 		homeText: {
 			// 是否启用主页横幅文字
-			enable: true,
+			enable: false,
+			// 是否允许用户通过控制面板切换横幅标题显示
+			switchable: true,
 			// 主页横幅主标题
 			title: "Lovely 天依!",
 			// 主页横幅主标题字体大小
@@ -30,8 +67,8 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 主页横幅副标题
 			subtitle: [
 				"华风夏韵 洛水天依",
-					"未来的你会光芒万丈",
-					"我也是你万分之一的光",
+				"未来的你会光芒万丈",
+				"我也是你万分之一的光",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",
@@ -58,13 +95,13 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			},
 			text: {
 				// 桌面端要显示的来源文本
-				desktop: "Pixiv - Yolanda",
+				desktop: "Pixiv - MORI森",
 				// 移动端要显示的来源文本
 				mobile: "Pixiv - MORI森",
 			},
 			url: {
 				// 桌面端原始艺术品或艺术家页面的 URL 链接
-				desktop: "https://www.pixiv.net/artworks/95681846",
+				desktop: "https://www.pixiv.net/users/14292311",
 				// 移动端原始艺术品或艺术家页面的 URL 链接
 				mobile: "https://www.pixiv.net/users/14292311",
 				//留一下主要壁纸来源的档
@@ -82,14 +119,16 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 毛玻璃模糊度
 			blur: 3,
 		},
-		// 波浪动画效果配置，开启可能会影响页面性能，请根据自己的喜好开启
+		// 水波纹动画效果配置，开启会影响页面性能，请根据自己的喜好开启
 		waves: {
 			enable: {
-				// 桌面端是否启用波浪动画效果
+				// 桌面端是否启用水波纹动画效果
 				desktop: true,
-				// 移动端是否启用波浪动画效果
+				// 移动端是否启用水波纹动画效果
 				mobile: true,
 			},
+			// 是否允许用户通过控制面板切换水波纹动画
+			switchable: true,
 		},
 	},
 	// 全屏透明覆盖模式特有配置
